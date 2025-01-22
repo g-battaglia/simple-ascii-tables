@@ -1,0 +1,65 @@
+[tool.poetry]
+name = "simple-ascii-tables"
+version = "0.1.0"
+authors = ["Giacomo Battaglia <kerykeion.astrology@gmail.com>"]
+description = "Simple, minimal, dependency-free ASCII tables for Python."
+license = "MIT"
+homepage = "https://www.kerykeion.net/"
+repository = "https://www.kerykeion.net/"
+keywords = [
+    "ascii",
+    "table",
+    "ascii-table",
+    "ascii-tables",
+    "simple",
+    "simple-ascii-table",
+]
+readme = "README.md"
+include = ["LICENSE"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License (GPL)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Typing :: Typed",
+]
+
+# To include Kerykeion itself
+packages = [{ include = "simple_ascii_tables"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.0"
+black = "^24.4.2"
+poethepoet = "^0.19.0"
+
+# PyTest Automated Testing
+[tool.pytest.ini_options]
+log_cli_level = 20
+
+log_cli = "True"
+testpaths = "tests"
+
+log_level = 20
+log_date_format = "%Y-%m-%d %H:%M:%S"
+log_format = "%(asctime)s %(levelname)s %(message)s"
+
+# Black Code Formatter
+[tool.black]
+line-length = 120
+
+# Task Runner
+[tool.poe.tasks]
+test = "pytest"
+test-no-capture = "poetry run pytest --show-capture no  "
+format = "black --line-length 120"
