@@ -1,11 +1,11 @@
 [tool.poetry]
 name = "simple-ascii-tables"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["Giacomo Battaglia <kerykeion.astrology@gmail.com>"]
 description = "Simple, minimal, dependency-free ASCII tables for Python."
 license = "MIT"
-homepage = "https://www.kerykeion.net/"
-repository = "https://www.kerykeion.net/"
+homepage = "https://pypi.org/project/simple-ascii-tables/"
+repository = "https://github.com/g-battaglia/simple-ascii-tables"
 keywords = [
     "ascii",
     "table",
