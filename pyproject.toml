@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "simple-ascii-tables"
-version = "0.1.0"
+version = "1.0.0"
 authors = ["Giacomo Battaglia <kerykeion.astrology@gmail.com>"]
 description = "Simple, minimal, dependency-free ASCII tables for Python."
 license = "MIT"
