@@ -30,6 +30,7 @@ table_data = [
 ]
 
 table = AsciiTable(table_data)
+table.title = "User Information"
 print(table.table)
 ```
 
